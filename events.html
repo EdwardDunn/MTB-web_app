@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		
+		<meta charset="utf-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<link rel="stylesheet" type="text/css" href="styles/events.css" />
+		<script type="text/javascript" src="scripts/jquery-1.12.0.min.js"></script>
+	
+		
+		<script>
+		function togglescroll() {
+  $('body').on('touchstart', function(e) {
+    if ($('body').hasClass('noscroll')) {
+      e.preventDefault();
+    }
+  });
+}
+
+$(document).ready(function() {
+  /*togglescroll()*/
+  $(".icon").click(function() {
+    $(".mobilenav").fadeToggle(500);
+    $(".top-menu").toggleClass("top-animate");
+    $("body").toggleClass("noscroll");
+    $(".mid-menu").toggleClass("mid-animate");
+    $(".bottom-menu").toggleClass("bottom-animate");
+  });
+});
+
+// PUSH ESC KEY TO EXIT
+
+$(document).keydown(function(e) {
+  if (e.keyCode == 27) {
+    $(".mobilenav").fadeOut(500);
+    $(".top-menu").removeClass("top-animate");
+    $("body").removeClass("noscroll");
+    $(".mid-menu").removeClass("mid-animate");
+    $(".bottom-menu").removeClass("bottom-animate");
+  }
+});
+		</script>
+		
+
+		
+</head>
+		
+
+<body>
+
+
+		
+
+<div class="container1">
+
+	<div id="banner">
+	<img src="pics/eventsBanner.jpg" alt="banner">
+	
+	</div>	
+
+</div>
+
+<div class="container2">
+
+<div class="mobilenav">
+ <li><a href="index.html">HOME</a></li>
+  <li><a href="beginner.html">BEGINNER</a></li>
+  <li><a href="novice.html">NOVICE</a></li>
+  <li><a href="pro.html">PRO</a></li>
+  <li><a href="gallery.html">GALLERY</a></li>
+  <li><a href="events.html">EVENTS</a></li>
+</div>
+
+<a href="javascript:void(0)" class="icon">
+  <div class="hamburger">
+    <div class="menui top-menu"></div>
+    <div class="menui mid-menu"></div>
+    <div class="menui bottom-menu"></div>
+  </div>
+</a>
+
+</div>
+	
+
+<div class="containerTile1">
+<a href="http://www.mtbworldcupsa.co.za/">
+  <img src="pics/UCI_tile.jpg" alt="UCI advert" >
+</a> 
+</div>
+
+<div class="containerTile2">
+<a href="http://www.muckmedden.co.uk/creamothecroft/">
+  <img src="pics/COC_tile.jpg" alt="COC" >
+</a> 
+
+</div>
+
+
+<div class="containerTile3">
+<a href="http://www.redbull.com/uk/en/bike/events/1331726423300/red-bull-foxhunt-rachel-atherton">
+  <img src="pics/redbull_tile.jpg" alt="Redbull advert" >
+</a> 
+
+
+
+</div>
+
+
+<div class="containerTile4">
+<a href="quiz.html">
+  <img src="pics/quiz_tile.jpg" alt="quiz" >
+</a> 
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
+

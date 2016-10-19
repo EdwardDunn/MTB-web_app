@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		
+		<meta charset="utf-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<link rel="stylesheet" type="text/css" href="styles/gallery.css" />
+		<script type="text/javascript" src="scripts/jquery-1.12.0.min.js"></script>
+		
+		
+		<script>
+		function togglescroll() {
+  $('body').on('touchstart', function(e) {
+    if ($('body').hasClass('noscroll')) {
+      e.preventDefault();
+    }
+  });
+}
+
+$(document).ready(function() {
+ /* togglescroll()*/
+  $(".icon").click(function() {
+    $(".mobilenav").fadeToggle(500);
+    $(".top-menu").toggleClass("top-animate");
+    $("body").toggleClass("noscroll");
+    $(".mid-menu").toggleClass("mid-animate");
+    $(".bottom-menu").toggleClass("bottom-animate");
+  });
+});
+
+// PUSH ESC KEY TO EXIT
+
+$(document).keydown(function(e) {
+  if (e.keyCode == 27) {
+    $(".mobilenav").fadeOut(500);
+    $(".top-menu").removeClass("top-animate");
+    $("body").removeClass("noscroll");
+    $(".mid-menu").removeClass("mid-animate");
+    $(".bottom-menu").removeClass("bottom-animate");
+  }
+});
+		</script>
+		
+
+		
+</head>
+		
+
+<body>
+
+
+		
+
+<div class="container1">
+	<div id="banner">
+	<img src="pics/galleryBanner.jpg" alt="banner">
+	</div>	
+</div>
+<div class="container1">
+	<div id="text">
+	<img src="pics/email_address.jpg" alt="banner">
+	</div>	
+</div>
+
+
+
+<div class="container2">
+
+<div class="mobilenav">
+ <li><a href="index.html">HOME</a></li>
+  <li><a href="beginner.html">BEGINNER</a></li>
+  <li><a href="novice.html">NOVICE</a></li>
+  <li><a href="pro.html">PRO</a></li>
+  <li><a href="gallery.html">GALLERY</a></li>
+  <li><a href="events.html">EVENTS</a></li>
+</div>
+
+<a href="javascript:void(0)" class="icon">
+  <div class="hamburger">
+    <div class="menui top-menu"></div>
+    <div class="menui mid-menu"></div>
+    <div class="menui bottom-menu"></div>
+  </div>
+</a>
+
+</div>
+
+<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+
+<div id="background">
+  <div id="gallery">
+  
+	<div class="pic31">
+    <figure class="pic2">
+      <img src="pics/gallery_tile7.jpg">
+      <figcaption>Nevis Range</figcaption>
+    </figure>
+	</div>
+	
+	<div class="pic32">
+    <figure class="pic3">
+      <img src="pics/gallery_tile5.jpg">
+      <figcaption>West Highland Way</figcaption>
+    </figure>
+	</div>
+	
+	
+	<div class="pic33">
+    <figure class="pic4">
+      <img src="pics/gallery_tile4.jpg">
+      <figcaption>Loch Lommond</figcaption>
+    </figure>
+	</div>
+	
+	<div class="pic34">
+    <figure class="pic6">
+      <img src="pics/gallery_tile1.jpg">
+      <figcaption>Red Bull Event</figcaption>
+    </figure>
+	</div>
+	
+	<div class="pic35">
+    <figure class="pic7">
+      <img src="pics/gallery_tile2.jpg">
+      <figcaption>Red Bull Fox Run</figcaption>
+    </figure>
+	</div>
+	
+	<div class="pic36">
+    <figure class="pic8">
+      <img src="pics/gallery_tile3.jpg">
+      <figcaption>Aviemore</figcaption>
+    </figure>
+	</div>
+   
+   <div class="pic37">
+    <figure class="pic9">
+      <img src="pics/gallery_tile8.jpg">
+      <figcaption>Fort William</figcaption>
+    </figure>
+	</div>
+	
+	<div class="pic38">
+    <figure class="pic10">
+      <img src="pics/gallery_tile6.jpg">
+      <figcaption>Fort William</figcaption>
+    </figure>
+	</div>
+   
+   
+    
+  </div>
+</div>
+	
+
+
+
+
+
+</body>
+</html>
+

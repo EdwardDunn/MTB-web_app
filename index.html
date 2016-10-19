@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		
+		<meta charset="utf-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+	
+		<script type="text/javascript" src="scripts/jquery-1.12.0.min.js"></script>
+	
+		
+		<script>
+		function togglescroll() {
+  $('body').on('touchstart', function(e) {
+    if ($('body').hasClass('noscroll')) {
+      e.preventDefault();
+    }
+  });
+}
+
+$(document).ready(function() {
+  /*togglescroll()*/
+  $(".icon").click(function() {
+    $(".mobilenav").fadeToggle(500);
+    $(".top-menu").toggleClass("top-animate");
+    $("body").toggleClass("noscroll");
+    $(".mid-menu").toggleClass("mid-animate");
+    $(".bottom-menu").toggleClass("bottom-animate");
+  });
+});
+
+// PUSH ESC KEY TO EXIT
+
+$(document).keydown(function(e) {
+  if (e.keyCode == 27) {
+    $(".mobilenav").fadeOut(500);
+    $(".top-menu").removeClass("top-animate");
+    $("body").removeClass("noscroll");
+    $(".mid-menu").removeClass("mid-animate");
+    $(".bottom-menu").removeClass("bottom-animate");
+  }
+});
+		</script>
+		
+
+		
+</head>
+		
+
+<body>
+
+<div class="mobilenav">
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="beginner.html">BEGINNER</a></li>
+  <li><a href="novice.html">NOVICE</a></li>
+  <li><a href="pro.html">PRO</a></li>
+  <li><a href="gallery.html">GALLERY</a></li>
+  <li><a href="events.html">EVENTS</a></li>
+</div>
+
+<a href="javascript:void(0)" class="icon">
+  <div class="hamburger">
+    <div class="menui top-menu"></div>
+    <div class="menui mid-menu"></div>
+    <div class="menui bottom-menu"></div>
+  </div>
+</a>
+
+<div class="container1">
+
+	<a href="beginner.html">
+	<img src="pics/imgBeginner.jpg" alt="beginner" href="beginner.html">
+
+</div>
+
+<div class ="container2">
+
+	<a href="novice.html">
+	<img src="pics/imgNovice.jpg" alt="novice">
+	
+</div>
+
+<div class="container3">
+		
+	<a href="pro.html">
+	<img src="pics/imgPro.jpg" alt="pro">
+	
+</div>
+
+<div class="container4">
+<a href="events.html">
+<img src="pics/events_tile.jpg" alt="events" >
+</a> 
+
+</div>
+
+<div class="container5">
+<img src="pics/chooseLevel.jpg" alt="footer">
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		
+		<meta charset="utf-8" />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<link rel="stylesheet" type="text/css" href="styles/novice.css" />
+		<script type="text/javascript" src="scripts/jquery-1.12.0.min.js"></script>
+	
+		
+		<script>
+		function togglescroll() {
+  $('body').on('touchstart', function(e) {
+    if ($('body').hasClass('noscroll')) {
+      e.preventDefault();
+    }
+  });
+}
+
+$(document).ready(function() {
+ /* togglescroll()*/
+  $(".icon").click(function() {
+    $(".mobilenav").fadeToggle(500);
+    $(".top-menu").toggleClass("top-animate");
+    $("body").toggleClass("noscroll");
+    $(".mid-menu").toggleClass("mid-animate");
+    $(".bottom-menu").toggleClass("bottom-animate");
+  });
+});
+
+// PUSH ESC KEY TO EXIT
+
+$(document).keydown(function(e) {
+  if (e.keyCode == 27) {
+    $(".mobilenav").fadeOut(500);
+    $(".top-menu").removeClass("top-animate");
+    $("body").removeClass("noscroll");
+    $(".mid-menu").removeClass("mid-animate");
+    $(".bottom-menu").removeClass("bottom-animate");
+  }
+});
+		</script>
+		
+
+		
+</head>
+		
+
+<body>
+
+
+		
+
+<div class="container1">
+
+	<div id="banner">
+	<img src="pics/noviceBanner.jpg" alt="banner">
+	
+	</div>	
+
+</div>
+
+<div class="container2">
+
+<div class="mobilenav">
+ <li><a href="index.html">HOME</a></li>
+  <li><a href="beginner.html">BEGINNER</a></li>
+  <li><a href="novice.html">NOVICE</a></li>
+  <li><a href="pro.html">PRO</a></li>
+  <li><a href="gallery.html">GALLERY</a></li>
+  <li><a href="events.html">EVENTS</a></li>
+</div>
+
+<a href="javascript:void(0)" class="icon">
+  <div class="hamburger">
+    <div class="menui top-menu"></div>
+    <div class="menui mid-menu"></div>
+    <div class="menui bottom-menu"></div>
+  </div>
+</a>
+
+</div>
+	
+
+<div class="containerTile1">
+<div class="link">
+<a href="pics/glentress_map.jpg">
+<img src="pics/glentress_link2.jpg" alt="events">
+</div>
+<div class="link">
+<a href="http://scotland.forestry.gov.uk/images/pdf/rec_pdfs/LagganWolftraxMap.pdf">
+<img src="pics/laggan_link2.jpg" alt="events">
+</div>
+<div class="link">
+<a href="http://scotland.forestry.gov.uk/images/pdf/rec_pdfs/WitchsTrailsGuideMap.pdf">
+<img src="pics/witch_link2.jpg" alt="events">
+</div>
+<div class="link">
+<a href="http://www.newcastleton.org/index_files/image5751.jpg">
+<img src="pics/newcastleton_link2.jpg" alt="events">
+</div>
+<div class="link">
+<img src="pics/trail_link2.jpg" alt="events">
+</div>
+
+</div>
+
+
+<div class="containerTile2">
+<a href="events.html">
+<img src="pics/events_tile.jpg" alt="events">
+</a> 
+
+
+</div>
+
+
+<div class="containerTile3">
+<img src="pics/laggan_facilities.jpg" alt="facilities">
+
+
+
+</div>
+
+<div class="containerTile4">
+<img src="pics/hire_prices.jpg" alt="hire prices">
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
+
